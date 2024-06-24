@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="shekainve.jpeg" alt="Logo" class="logo">
+        <form onsubmit="login(event)" class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <button type="button" class="sign-up-button" onclick="window.location.href='https://docs.google.com/forms/d/1V3X74Ldsgzthj_oBV4NRw3P1vc1YDVZWFgMVSF-D24c/edit'">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        // Define an array of users with their respective redirection URLs
+        var users = [
+            { username: "tomas", password: "123", redirectPage: "cleotomas.html" },
+            { username: "user2", password: "password2", redirectPage: "user2.html" },
+            // Add more users as needed
+        ];
+
+        function login(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Iterate through the array of users
+            for (var i = 0; i < users.length; i++) {
+                // Check if provided credentials match any user
+                if (username === users[i].username && password === users[i].password) {
+                    alert("Login successful!");
+                    window.location.href = users[i].redirectPage; // Redirect to user's page
+                    return; // Exit the function after successful login
+                }
+            }
+
+            // If the loop finishes without finding a matching user, show an error message
+            alert("Invalid username or password. Please try again.");
+        }
+    </script>
+</body>
+</html>
+
