@@ -1,0 +1,175 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(to bottom right, #09505a, #00acc1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.accounts, .actions, .refer-friend, .transactions, .footer {
+    margin-bottom: 20px;
+}
+
+.accounts h2, .refer-friend h3, .transactions h3 {
+    color: #cacfcd;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    background: #004d40;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.account:hover {
+    background: #00796b;
+}
+
+.account-type, .account-balance, .account-status {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.actions {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.action {
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #004d40;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.action img:hover {
+    background: #00796b;
+}
+
+.refer-friend {
+    background: #f9f9f9;
+    color: #050404;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.refer-friend a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fffdfd;
+    background: #25d366;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.refer-friend a:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+}
+
+.transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333;
+    display: none;
+}
+
+.transactions td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.footer a {
+    margin: 0 10px;
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+
+    .actions {
+        flex-direction: row;
+    }
+
+    .account, .refer-friend, .transactions, .footer {
+        margin-bottom: 10px;
+    }
+}
